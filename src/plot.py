@@ -79,6 +79,8 @@ def plot_pwcet(et_array, et_array_sorted, num_elements, title) -> None:
     plt.plot(pwcet_curve[:, 0], pwcet_curve[:, 1], 'b-', linewidth=3, label='Analyzed CDF')
     plt.plot(cdf[:, 0], cdf[:, 1], 'r--', linewidth=3, label='Profiled CDF')
     plt.title(title, fontsize=16)
+    plt.xlabel('Execution Time [us]', fontsize=14)
+    plt.ylabel('Probability', fontsize=14)
     plt.legend()
     plt.grid(True)
     plt.savefig(f'{OUTPUT_DIR}/{title}_pwcet_cdf.png')

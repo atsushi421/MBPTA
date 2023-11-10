@@ -8,18 +8,17 @@ $ python3 -m pip install -r requirements.txt
 
 ## Usage
 
-
 ```bash
-$ python3 src/MBPTA-CV.py [--input_file INPUT_FILE] [--title TITLE] [--plot_pwcet] [--plot_cv]
+usage: MBPTA-CV.py [-h] [--latency_cache_dir LATENCY_CACHE_DIR] [--plot_pwcet] [--plot_cv]
 ```
 
 ```bash
 options:
-  -h, --help               show this help message and exit
-  --input_file INPUT_FILE  Path to the input file trace
-  --title TITLE            Title for plots
-  --plot_pwcet             Generate the pWCET plot if set
-  --plot_cv                Generate the CV plot if set
+  -h, --help            show this help message and exit
+  --latency_cache_dir LATENCY_CACHE_DIR
+                        Path to the latency cache directory
+  --plot_pwcet          Generate the pWCET plot if set
+  --plot_cv             Generate the CV plot if set
 ```
 
 ## Reference

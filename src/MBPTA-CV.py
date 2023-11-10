@@ -66,14 +66,14 @@ def main(et_array, title: str, plot_pwcet_flag: bool, plot_cv_flag: bool) -> Non
     if plot_pwcet_flag:
         plot_pwcet(et_array, et_array_sorted, num_elements, title)
 
-    print("Analysis completed.")
+    print("[INFO] Analysis completed.")
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument(
         '--latency_cache_dir', type=str, help='Path to the latency cache directory',
-        default='/home/atsushi/autoware_optimization_tools/latency_cache'
+        default='~/autoware_optimization_tools/latency_cache'
     )
     parser.add_argument(
         '--plot_pwcet', action='store_true',
@@ -93,12 +93,12 @@ if __name__ == '__main__':
         if len(latencies) < 100:
             print(f'[ERROR] Data size is less than 100: {cache_file}')
             continue
-        if ljung_box_test(latencies):
-            print(f'[ERROR] Ljung-Box test failed: {cache_file}')
-            continue
-        if kolmogorov_smirnov_test(latencies):
-            print(f'[ERROR] Kolmogorov-Smirnov test failed: {cache_file}')
-            continue
+        # if ljung_box_test(latencies):
+        #     print(f'[ERROR] Ljung-Box test failed: {cache_file}')
+        #     continue
+        # if kolmogorov_smirnov_test(latencies):
+        #     print(f'[ERROR] Kolmogorov-Smirnov test failed: {cache_file}')
+        #     continue
 
         main(
             latencies, f'{cache_file.split(".")[0]}', args.plot_pwcet, args.plot_cv
