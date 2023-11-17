@@ -6,19 +6,26 @@
 $ python3 -m pip install -r requirements.txt
 ```
 
+## Preparation
+Please store the task's latency statistics to files in one of the following formats:
+- `.txt`
+- `.npy`
+
+Example is available in the [sample directory](https://github.com/atsushi421/MBPTA/tree/main/sample).
+
 ## Usage
 
 ```bash
-usage: MBPTA-CV.py [-h] [--latency_cache_dir LATENCY_CACHE_DIR] [--plot_pwcet] [--plot_cv]
+python3 MBPTA-CV.py [-h] [--latency_dir LATENCY_DIR] [--plot_pwcet] [--plot_cv]
 ```
 
 ```bash
 options:
   -h, --help            show this help message and exit
-  --latency_cache_dir LATENCY_CACHE_DIR
-                        Path to the latency cache directory
-  --plot_pwcet          Generate the pWCET plot if set
-  --plot_cv             Generate the CV plot if set
+  --latency_dir LATENCY_DIR
+                        Path to the latency directory.
+  --plot_pwcet          Generate the pWCET plot if set.
+  --plot_cv             Generate the CV plot if set.
 ```
 
 ## Reference

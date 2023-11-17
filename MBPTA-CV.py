@@ -6,9 +6,9 @@ import numpy as np
 from scipy.stats import expon, kstest  # type: ignore
 from statsmodels.stats.diagnostic import acorr_ljungbox  # type: ignore
 
-from config import (IID_TEST_THRESHOLD, MIN_REQUIRED_TAILS,  # type: ignore
-                    NUM_IGNORE, PWCET_GRANULARITY, Z_VALUE)
-from plot import plot_cv, plot_pwcet  # type: ignore
+from src.config import (IID_TEST_THRESHOLD, MIN_REQUIRED_TAILS,  # type: ignore
+                        NUM_IGNORE, PWCET_GRANULARITY, Z_VALUE)
+from src.plot import plot_cv, plot_pwcet  # type: ignore
 
 
 def ljung_box_test(et_array: np.ndarray) -> bool:
@@ -83,13 +83,13 @@ def main(et_array: np.ndarray, title: str, plot_pwcet_flag: bool, plot_cv_flag: 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '--latency_dir', default='/home/atsushi/MBPTA/sample'
+        '--latency_dir', default='./sample', help="Path to the latency directory."
     )
     parser.add_argument(
-        '--plot_pwcet', action='store_true', default=True
+        '--plot_pwcet', action='store_true', default=True, help="Generate the pWCET plot if set."
     )
     parser.add_argument(
-        '--plot_cv', action='store_true', default=True
+        '--plot_cv', action='store_true', default=True, help="Generate the CV plot if set."
     )
     args = parser.parse_args()
 

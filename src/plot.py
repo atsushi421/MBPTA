@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt  # type: ignore
 import numpy as np
 
-OUTPUT_DIR = '../output/'
+OUTPUT_DIR = './output/'
 
 
 def plot_cv(residual_cv: np.ndarray, limit_above: np.ndarray, limit_below: np.ndarray, title: str) -> None:
