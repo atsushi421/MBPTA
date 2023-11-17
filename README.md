@@ -29,4 +29,7 @@ options:
 ```
 
 ## Reference
-[1] M. Alcon, H. Tabani, L. Kosmidis, E. Mezzetti, J. Abella and F. J. Cazorla, "Timing of Autonomous Driving Software: Problem Analysis and Prospects for Future Solutions," 2020 IEEE Real-Time and Embedded Technology and Applications Symposium (RTAS), Sydney, NSW, Australia, 2020, pp. 267-280, doi: 10.1109/RTAS48715.2020.000-1.
+Jaume Abella, Maria Padilla, Joan Del Castillo, and Francisco J. Cazorla. 2017. Measurement-Based Worst-Case Execution Time Estimation Using the Coefficient of Variation. ACM Trans. Des. Autom. Electron. Syst. 22, 4, Article 72 (October 2017), 29 pages. https://doi.org/10.1145/3065924
+
+> [!TIP]
+> A summary of this paper is provided [here](https://atsushi421.github.io/markdown_share/paper/2017_TODAES_Measurement-Based_Worst-Case_Execution_Time_Estimation_Using/summary_2017_TODAES_Measurement-Based_Worst-Case_Execution_Time_Estimation_Using/).
